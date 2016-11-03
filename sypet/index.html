@@ -1,1 +1,143 @@
-SyPet
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hunter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Hunter</h1>
+      <h2 class="project-tagline">Next-Generation Code Reuse for Java</h2>
+      <a href="https://marketplace.eclipse.org/content/hunter" class="btn">Try Hunter</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="hunter" class="anchor" href="#hunter" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hunter</h3>
+
+<p>Hunter is a tool that facilitates code reuse by finding relevant methods in
+large code bases and automatically synthesizing any necessary wrapper code. Since Hunter internally uses advanced
+program synthesis technology, it can automatically reuse existing methods even when code adaptation is necessary. We
+have implemented Hunter as an Eclipse plug-in and it is available on <a href="https://marketplace.eclipse.org/content/hunter">Eclipse marketplace</a>.</p>
+
+<h3>
+<a id="doc" class="anchor" href="#doc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>The inputs to Hunter system include
+<ul>
+    <li>Desired method signature</li>
+    <li>Brief natural language description</li>
+    <li>Simple JUnit tests</li>
+</ul>
+For example, consider a Bresenham line drawing algorithm, which selects a
+vector of points on the raster to approximate a straight line, and is
+commonly used to draw lines on a computer screen. The method signature and
+a natural language description are
+
+<pre><code>public class BresenhamLine {
+    //@ Bresenham's line drawing algorithm
+    public static void drawLine(MyPoint pt, Vector&lt;MyPoint&gt; res) {
+        
+    }
+}
+</code></pre>
+
+Note that <code>MyPoint</code> in the signature is a customized reference
+type, which has the following defintion
+<pre><code> public class MyPoint {
+    int x;
+    int y;
+    // getters, setters
+    // hashcode, equals ...
+}
+</code></pre>
+
+As a consequence, this <code>MyPoint</code> does not belong to the type
+hierarchy of all <code>Point</code> types in the corpus,
+e.g. <code>java.awt.Point</code>, etc.
+Thus, in a <code>MyPoint</code> context, it requires type conversion
+if we want to reuse code written using <code>java.awt.Point</code>.
+This task can be automatically finished by Hunter.<br>
+
+<br>
+To validate the code that Hunter would synthesize, we provide a simple
+test suite to test the functionality of <code>drawLine</code> method
+<pre><code>public class TestBresenhamLine {
+    @Test
+    public void test1() {
+        Vector&lt;MyPoint&gt; v1 = new Vector&lt;&gt;();
+        v1.add(new MyPoint(0, 0)); v1.add(new MyPoint(1, 1));
+        v1.add(new MyPoint(2, 1)); v1.add(new MyPoint(3, 2));
+        v1.add(new MyPoint(4, 2)); v1.add(new MyPoint(5, 3));
+        Vector&lt;MyPoint&gt; res = new Vector&lt;&gt;();
+        BresenhamLine.drawLine(new MyPoint(5, 3), res);
+        assertEquals(v1, res);
+    }
+}
+</code></pre>
+
+After saving all files and ensuring no compilation error (except missing
+the return statement), put cursor back into the desired method. Now we have
+two approaches to run the Hunter system
+<ul>
+    <li>Press <code>Ctrl + 5</code> for Linux user (<code>Command + 5</code> for Mac OS user)
+    <li>Right-click the blank space and choose <code>Run Hunter</code> in the menu
+</ul>
+
+A progress bar will pop up and shows the working progress. Once the entire
+reuse procedure is finished, Hunter will automatically insert the code
+snippet into the method body, as well as resolve all its dependencies.
+For brevity, here shows a simplified version of the code snippet
+
+<pre><code>public class BresenhamLine {
+    //@ Bresenham's line drawing algorithm
+    public static void drawLine(MyPoint pt, Vector&lt;MyPoint&gt; res) {
+        int v1 = pt.getX(); int v2 = pt.getY();
+        Point[] v3 = external.bresenham(0, 0, v1, v2);
+        for (Point v4 : v3) {
+            int v5 = v4.getX(); int v6 = v4.getY();
+            MyPoint v7 = new MyPoint(v5, v6);
+            res.add(v7);
+        }
+    }
+}
+</code></pre>
+
+</p>
+
+<p>To get more information on installation and configuration, or to get
+    more examples, please refer to <a href="HunterUserManual.pdf">Hunter User Manual</a>.</p>
+
+<h3>
+<a id="video" class="anchor" href="#video" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo Video</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pomR1zlKBz0" frameborder="0" allowfullscreen></iframe>
+<p>YouTube link: <a href="https://youtu.be/pomR1zlKBz0">Hunter Demo</a></p>
+
+<h3>
+<a id="technical-report" class="anchor" href="#technical-report" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Report</h3>
+
+<p>Hunter: Next-Generation Code Reuse for Java. Yuepeng Wang, Yu Feng, Ruben Martins, Arati Kaushik, Isil Dillig and Steven P. Reiss</p>
+
+<h3>
+<a id="data-set" class="anchor" href="#data-set" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset</h3>
+
+<p>To reproduce the result in our technical report, you need to download the <a href="HunterBenchmarks.tar.gz">dataset</a> that contains 40 benchmarks, and import them into Eclipse.</p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">Hunter is maintained by <a href="https://www.cs.utexas.edu/~ypwang/">Yuepeng Wang</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
