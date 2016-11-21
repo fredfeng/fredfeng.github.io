@@ -117,15 +117,15 @@ function build-csv {
 sypet-logo
 
 bench="math"
-#run-bench
+run-bench
 
 bench="geometry"
-#run-bench
+run-bench
 
 bench="joda"
-#run-bench
+run-bench
 
 bench="xml"
-#run-bench
+run-bench
 
 build-csv
