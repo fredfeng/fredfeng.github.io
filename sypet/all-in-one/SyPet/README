@@ -79,6 +79,11 @@ between two points:
 SyPet can be run on this new example by executing the command line:
 ./run-sypet.sh example/example.json
 
+Please make sure that all test cases are correct before you run SyPet, otherwise 
+it will lead to incorrect solution or timeout. e.g., some of test cases under 
+"joda/" are sensitive to current date or year. If you run into a timeout, please 
+double check the correctness of corresponding test cases.
+
 +------------------------------------------------------------------------------+
 |                                                                              |
 | C. SyPet Options                                                             |
