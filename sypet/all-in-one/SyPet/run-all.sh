@@ -12,15 +12,13 @@ function sypet-logo {
 }
 
 function run-bench {
-    for f in geometry joda math xml ; do
-        if [ ! -d output/$f ] ; then
-            mkdir output/$f
-        else
-            echo "$(tput setaf 4)[SyPet]$(tput sgr 0) Cleaning output files $(tput bold)output/$f$(tput sgr 0)..."            
-            rm -f output/$f/*
-        fi
-    done
-
+    if [ ! -d output/$benh ] ; then
+        mkdir output/$bench
+    else
+        echo "$(tput setaf 4)[SyPet]$(tput sgr 0) Cleaning output files $(tput bold)output/$bench$(tput sgr 0)..."            
+        rm -f output/$bench/*
+    fi
+    
     echo "$(tput setaf 4)[SyPet]$(tput sgr 0) Running $(tput bold)$bench$(tput sgr 0) benchmarks..."
     for f in sypet/benchmarks/$bench/* ; do 
 	id=$(basename $f)
