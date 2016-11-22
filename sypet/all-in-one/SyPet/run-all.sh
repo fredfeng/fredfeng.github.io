@@ -1,4 +1,5 @@
 #!/bin/bash
+export LC_NUMERIC=C
 
 bench="math"
 
@@ -11,6 +12,15 @@ function sypet-logo {
 }
 
 function run-bench {
+    for f in geometry joda math xml ; do
+        if [ ! -d output/$f ] ; then
+            mkdir output/$f
+        else
+            echo "$(tput setaf 4)[SyPet]$(tput sgr 0) Cleaning output files $(tput bold)output/$f$(tput sgr 0)..."            
+            rm -f output/$f/*
+        fi
+    done
+
     echo "$(tput setaf 4)[SyPet]$(tput sgr 0) Running $(tput bold)$bench$(tput sgr 0) benchmarks..."
     for f in sypet/benchmarks/$bench/* ; do 
 	id=$(basename $f)
@@ -53,9 +63,7 @@ function build-csv {
     i=1
     for f in math geometry joda xml ; do 
 	for z in output/$f/*.log ; do
-	    #y=`grep "Synthesis Time" $z | cut -d ':' -f 2`
-            #y=`grep "Compilation Time" $z | cut -d ':' -f 2`
-	    y=`grep "Total Time" $z | cut -d ':' -f 2`
+	    y=`grep "Synthesis Time" $z | cut -d ':' -f 2`
 	    synthesis[$i]=`echo "scale=2; $y/1000" | bc -l`
 	    (( i++ ))
 	done
