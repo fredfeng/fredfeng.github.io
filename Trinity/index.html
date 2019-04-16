@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Trinity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Trinity</h1>
+      <h2 class="project-tagline">An Extensible Synthesis Framework for Data Science</h2>
+      <a href="https://github.com/fredfeng/Trinity" class="btn">Try Trinity</a>
+    </section>
+
+
+    <section class="main-content">
+      <h3>
+<a id="trinity" class="anchor" href="#trinity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>
+  Trinity is a general-purpose framework that can be used to quickly build domain-specific program 
+  synthesizers for automating many tedious tasks that arise in data science. 
+</p>
+<embed src="media/overview.pdf" width="500" height="335" 
+ type="application/pdf">
+
+<p><b>End-user</b> 
+From the perspective of end-users, Trinity provides a rich PBE environment that can be used to 
+automate various tasks that arise in data science. In particular, current synthesizers in 
+Trinity can generate list and table transformations, SQL queries, and programs that consolidate 
+values from different sources. To perform a synthesis task, the end-user specifies her intent by 
+using input-output examples. Additionally, the user can (optionally) also specify so-called 
+<em>preference predicates</em> that introduce inductive bias to the synthesizer. For example, 
+if the user thinks that the synthesized program should  contain the <em>concat</em> function for 
+concatenating two strings, she can provide this information to Trinity by adding a predicate 
+like <em>occurs(concat, 80%)</em>, where 80% indicates the user's confidence that the target 
+program will contain the <em>concat</em> function. Given such a predicate, Trinity will bias its 
+search towards programs that contain at least one occurrence of the <em>concat</em> operator.
+</p>
+
+<p>
+<b>Advanced user</b>
+From the perspective of an advanced user (or domain expert), Trinity can be used to  build new 
+synthesizers or extend  functionality of existing synthesizers. For example, to build a new 
+synthesizer on top of Trinity, the domain expert only needs to provide a domain-specific 
+language (DSL) that  is suitable for the target class of tasks.
+In addition to the syntax of the DSL and its interpreter, the user can also provide logical 
+specifications for the DSL constructs in order to speed up synthesis. However, these logical 
+specifications need not precisely specify the semantics of the DSL construct. For example, 
+consider the <em>concat</em> operator that concatenates two strings <em>a</em> and <em>b</em> 
+and returns a string <em>c</em>. We can encode the semantics of this operator using the logical 
+specification <em>len(c)=len(a)+len(b)</em>, where <em>len</em> denotes the length of the string. 
+Note that this specification gives a partial rather than complete description of what the 
+<em>concat</em> operator does. Internally, Trinity's synthesis algorithm uses such 
+specifications to dramatically prune the search space of possible programs.
+</p>
+
+<p>
+<b>Synthesis expert</b>:
+For users with some knowledge of program synthesis, Trinity's synthesis engine can be 
+customized to more efficiently search for programs that satisfy the user-provided examples. 
+At its core, Trinity's synthesis algorithm performs backtracking search over DSL programs 
+but leverages program semantics to significantly prune the search space. Furthermore, 
+the search algorithm in Trinity is <em>conflict-driven</em> in that it can learn 
+useful "lemmas" based on failed synthesis attempts (i.e., conflicts). 
+An advanced user with some knowledge of program synthesis can further customize the 
+underlying algorithm in Trinity by either changing its search strategy or by 
+integrating a statistical model into the enumeration engine.
+</p>
+
+<!--h3>
+<a id="doc" class="anchor" href="#doc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>TBD.</p-->
+
+<h3>
+<a id="technical-report" class="anchor" href="#tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tutorial</h3>
+
+<p>
+Check out a <a href="dev/index.html">tutorial</a> written by Jia Chen.
+</p>
+
+<h3>
+<a id="video" class="anchor" href="#video" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Video</h3>
+
+<p>Check out our video made by Ruben Martins.</p>
+<video width="612" height="400" controls>
+  <source src="media/vldb19-demo.mov" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">Trinity is maintained by <a href="https://www.cs.utexas.edu/~rmartins/">Ruben Martins</a>, Jia Chen, and <a href="http://www.cs.utexas.edu/~yufeng/">Yu Feng</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
