@@ -1,0 +1,279 @@
+[
+  {
+    "authors": "Junrui Liu, Jiaxin Song, Yanning Chen, Hanzhi Liu, Hongbo Wen, Luke Pearson, Yanju Chen, Yu Feng",
+    "title": "Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits",
+    "venue": "OOPSLA",
+    "year": 2025,
+    "url": "https://dl.acm.org/doi/10.1145/3763110"
+  },
+  {
+    "authors": "Tamjid Al Rahat, Yanju Chen, Yu Feng, Yuan Tian",
+    "title": "Automated Repair of OpenID Connect Programs",
+    "venue": "ASE",
+    "year": 2025,
+    "url": "https://conf.researchr.org/details/ase-2025/ase-2025-papers/206/Automated-Repair-of-OpenID-Connect-Programs"
+  },
+  {
+    "authors": "Junrui Liu, Jiaxin Song, Yanning Chen, Hanzhi Liu, Hongbo Wen, Yanju Chen, Yu Feng",
+    "title": "Tessel: An Optimizing Compiler for Efficient Zero-Knowledge Circuits",
+    "venue": "SBC",
+    "year": 2025,
+    "url": "#"
+  },
+  {
+    "authors": "Hongbo Wen, Hanzhi Liu, Jiaxin Song, Yanju Chen, Wenbo Guo, Yu Feng",
+    "title": "FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols",
+    "venue": "CCS",
+    "year": 2024,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3658644.3690293"
+  },
+  {
+    "authors": "Tamjid Al Rahat, Yu Feng, Yuan Tian",
+    "title": "AuthSaber: Automated Safety Verification of OpenID Connect Programs",
+    "venue": "CCS",
+    "year": 2024,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3658644.3670318"
+  },
+  {
+    "authors": "Junrui Liu, Jingtao Xia, Nicholas Brown, Yanju Chen, Yu Feng",
+    "title": "Refinement Types for Visualization",
+    "venue": "ASE",
+    "year": 2024,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3691620.3695550"
+  },
+  {
+    "authors": "Junrui Liu, Hanzhi Liu, Ian Kretz, Bryan Tan, Jonathan Wang, Yi Sun, Luke Pearson, Anders Miltner, Isil Dillig, Yu Feng",
+    "title": "Certifying Zero-Knowledge Circuits with Refinement Types",
+    "venue": "IEEE Security & Privacy (Oakland)",
+    "year": 2024,
+    "url": "https://eprint.iacr.org/2023/547"
+  },
+  {
+    "authors": "Hongbo Wen, Jon Stephens, Yanju Chen, Kostas Ferles, Shankara Pailoor, Kyle Charbonnet, Isil Dillig, Yu Feng",
+    "title": "Practical Security Analysis of Zero-Knowledge Proof Circuits",
+    "venue": "USENIX Security",
+    "year": 2024,
+    "url": "https://eprint.iacr.org/2023/190"
+  },
+  {
+    "authors": "Yanju Chen, Chenglong Wang, Xinyu Wang, Osbert Bastani, Yu Feng",
+    "title": "Fast and Reliable Program Synthesis via User Interaction",
+    "venue": "ASE",
+    "year": 2023,
+    "url": "https://www.computer.org/csdl/proceedings-article/ase/2023/299600a963/1SBGDsstD1e"
+  },
+  {
+    "authors": "Junrui Liu, Yanju Chen, Eric Atkinson, Yu Feng, Ras Bodik",
+    "title": "Conflict-Driven Synthesis for Layout Engines",
+    "venue": "PLDI",
+    "year": 2023,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3591246"
+  },
+  {
+    "authors": "Yanju Chen, Shankara Pailoor, Franklyn Wang, Clara Rodríguez, Jacob Van Geffen, Jason Morton, Michael Chu, Brian Gu, Yu Feng, Isil Dillig",
+    "title": "Automated Detection of Under-constrained Circuits in Zero-Knowledge Proofs",
+    "venue": "PLDI",
+    "year": 2023,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3591282"
+  },
+  {
+    "authors": "Junrui Liu, Yanju Chen, Bryan Tan, Isil Dillig, Yu Feng",
+    "title": "Learning Contract Invariants Using Reinforcement Learning",
+    "venue": "ASE",
+    "year": 2022,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3551349.3556962"
+  },
+  {
+    "authors": "Tamjid Al Rahat, Yu Feng, Yuan Tian",
+    "title": "Cerberus: Query-driven Scalable Security Checking for OAuth Service Provider Implementations",
+    "venue": "CCS",
+    "year": 2022,
+    "url": "https://dl.acm.org/doi/10.1145/3548606.3559381"
+  },
+  {
+    "authors": "Yanju Chen, Xifeng Yan, Yu Feng",
+    "title": "Visualization Question Answering Using Introspective Program Synthesis",
+    "venue": "PLDI",
+    "year": 2022,
+    "award": "Distinguished Paper Award",
+    "url": "https://dl.acm.org/doi/10.1145/3519939.3523709"
+  },
+  {
+    "authors": "Yanju Chen, Junrui Liu, Yu Feng, Ras Bodik",
+    "title": "Tree Traversal Synthesis Using Domain-Specific Symbolic Compilation",
+    "venue": "ASPLOS",
+    "year": 2022,
+    "url": "/papers/hecate.pdf"
+  },
+  {
+    "authors": "Bryan Tan, Benjamin Mariano, Shuvendu Lahiri, Isil Dillig, Yu Feng",
+    "title": "SolType: Refinement Types for Solidity",
+    "venue": "POPL",
+    "year": 2022,
+    "url": "/papers/soltype.pdf"
+  },
+  {
+    "authors": "Benjamin Mariano, Yanju Chen, Yu Feng, Greg Durrett, Isil Dillig",
+    "title": "Automated Transpilation of Imperative to Functional Code using Neural-Guided Program Synthesis",
+    "venue": "OOPSLA",
+    "year": 2022,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3527315"
+  },
+  {
+    "authors": "Yuepeng Wang, Maruth Goyal, James Dong, Yanju Chen, Yu Feng, Isil Dillig",
+    "title": "Synthesis-Powered Optimization of Smart Contracts via Data Type Refactoring",
+    "venue": "OOPSLA",
+    "year": 2022,
+    "url": "https://dl.acm.org/doi/pdf/10.1145/3563308"
+  },
+  {
+    "authors": "Priyanka Bose, Dipanjan Das, Yanju Chen, Yu Feng, Christopher Kruegel, Giovanni Vigna",
+    "title": "SAILFISH: Vetting Smart Contract State-Inconsistency Bugs in Seconds",
+    "venue": "IEEE Security & Privacy (Oakland)",
+    "year": 2022,
+    "url": "/papers/sailfish.pdf"
+  },
+  {
+    "authors": "Zhen Zhang, Yu Feng, Michael D. Ernst, Sebastian Porst, Isil Dillig",
+    "title": "Checking Conformance of Applications against GUI Policies",
+    "venue": "FSE",
+    "year": 2021,
+    "url": "https://dl.acm.org/doi/10.1145/3468264.3468561"
+  },
+  {
+    "authors": "Chenglong Wang, Yu Feng, Ras Bodik, Isil Dillig, Alvin Cheung, Amy J Ko",
+    "title": "Falx: Synthesis-Powered Visualization Authoring",
+    "venue": "CHI",
+    "year": 2021,
+    "award": "Best Paper Award",
+    "url": "https://arxiv.org/pdf/2102.01024.pdf"
+  },
+  {
+    "authors": "Yu Feng, Emina Torlak, Ras Bodik",
+    "title": "Summary-Based Symbolic Evaluation for Smart Contracts",
+    "venue": "ASE",
+    "year": 2020,
+    "award": "Distinguished Paper Award",
+    "url": "/papers/ase20-solar.pdf"
+  },
+  {
+    "authors": "Benjamin Mariano, Yanju Chen, Yu Feng, Shuvendu Lahiri, Isil Dillig",
+    "title": "Demystifying Loops in Smart Contracts",
+    "venue": "ASE",
+    "year": 2020,
+    "url": "/papers/ase20-consul.pdf"
+  },
+  {
+    "authors": "Yanju Chen, Chenglong Wang, Osbert Bastani, Isil Dillig, Yu Feng",
+    "title": "Program Synthesis using Deduction-Guided Reinforcement Learning",
+    "venue": "CAV",
+    "year": 2020,
+    "url": "/papers/cav20.pdf"
+  },
+  {
+    "authors": "Chenglong Wang, Yu Feng, Ras Bodik, Alvin Cheung, Isil Dillig",
+    "title": "Visualization by Example",
+    "venue": "POPL",
+    "year": 2020,
+    "url": "/papers/popl20-viser.pdf"
+  },
+  {
+    "authors": "Tamjid Al Rahat, Yu Feng, Yuan Tian",
+    "title": "OAuthLint: An Empirical Study on OAuth Bugs in Android Applications",
+    "venue": "ASE",
+    "year": 2019,
+    "url": "/papers/ase19-oauth.pdf"
+  },
+  {
+    "authors": "Yanju Chen, Ruben Martins, Yu Feng",
+    "title": "Maximal Multi-layer Specification Synthesis",
+    "venue": "FSE",
+    "year": 2019,
+    "url": "/papers/fse19-mars.pdf"
+  },
+  {
+    "authors": "Jia Chen, Jiayi Wei, Yu Feng, Osbert Bastani, Isil Dillig",
+    "title": "Relational Verification using Reinforcement Learning",
+    "venue": "OOPSLA",
+    "year": 2019,
+    "url": "/papers/oopsla19-coeus.pdf"
+  },
+  {
+    "authors": "Jia Chen, Ruben Martins, Yanju Chen, Yu Feng, Isil Dillig",
+    "title": "Trinity: An Extensible Synthesis Framework for Data Science",
+    "venue": "PVLDB",
+    "year": 2019,
+    "url": "/papers/vldb19-trinity.pdf"
+  },
+  {
+    "authors": "Yu Feng, Ruben Martins, Osbert Bastani, Isil Dillig",
+    "title": "Program Synthesis using Conflict-Driven Learning",
+    "venue": "PLDI",
+    "year": 2018,
+    "award": "Distinguished Paper Award",
+    "url": "/papers/pldi18-neo.pdf"
+  },
+  {
+    "authors": "Jiayi Wei, Jia Chen, Yu Feng, Kostas Ferles, Isil Dillig",
+    "title": "Singularity: Pattern Fuzzing for Worst Case Complexity",
+    "venue": "FSE",
+    "year": 2018,
+    "url": "/papers/fse18.pdf"
+  },
+  {
+    "authors": "Jia Chen, Yu Feng, Isil Dillig",
+    "title": "Precise Detection of Side-Channel Vulnerabilities using Quantitative Cartesian Hoare Logic",
+    "venue": "CCS",
+    "year": 2017,
+    "url": "/papers/ccs17.pdf"
+  },
+  {
+    "authors": "Yu Feng, Ruben Martins, Jacob Van Geffen, Isil Dillig, Swarat Chaudhuri",
+    "title": "Component-based Synthesis of Table Consolidation and Transformation Tasks from Examples",
+    "venue": "PLDI",
+    "year": 2017,
+    "url": "/papers/pldi17-extend.pdf"
+  },
+  {
+    "authors": "Yu Feng, Osbert Bastani, Ruben Martins, Isil Dillig, Saswat Anand",
+    "title": "Automated Synthesis of Semantic Malware Signatures using Maximum Satisfiability",
+    "venue": "NDSS",
+    "year": 2017,
+    "url": "/papers/ndss17-astroid.pdf"
+  },
+  {
+    "authors": "Yu Feng, Ruben Martins, Yuepeng Wang, Isil Dillig, Thomas W. Reps",
+    "title": "Component-Based Synthesis for Complex APIs",
+    "venue": "POPL",
+    "year": 2017,
+    "url": "/papers/sypet.pdf"
+  },
+  {
+    "authors": "Yuepeng Wang, Yu Feng, Ruben Martins, Isil Dillig, Steven P. Reiss",
+    "title": "Hunter: Next-Generation Code Reuse for Java",
+    "venue": "FSE",
+    "year": 2016,
+    "url": null
+  },
+  {
+    "authors": "Yu Feng, Xinyu Wang, Isil Dillig, Thomas Dillig",
+    "title": "Bottom-up Context-Sensitive Pointer Analysis for Java",
+    "venue": "APLAS",
+    "year": 2015,
+    "url": "/papers/aplas15.pdf"
+  },
+  {
+    "authors": "Yu Feng, Xinyu Wang, Isil Dillig, Calvin Lin",
+    "title": "EXPLORER: Query- and Demand-Driven Exploration of Interprocedural Control Flow Properties",
+    "venue": "OOPSLA",
+    "year": 2015,
+    "url": "/papers/oopsla15_explorer.pdf"
+  },
+  {
+    "authors": "Yu Feng, Saswat Anand, Isil Dillig, Alex Aiken",
+    "title": "Apposcopy: Semantics-Based Detection of Android Malware through Static Analysis",
+    "venue": "FSE",
+    "year": 2014,
+    "url": "/papers/fse14.pdf"
+  }
+]

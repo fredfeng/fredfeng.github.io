@@ -1,0 +1,37 @@
+{
+  "name": "Yu Feng",
+  "name_cn": "冯煜",
+  "title": "Associate Professor",
+  "department": "Computer Science",
+  "department_url": "https://www.cs.ucsb.edu/",
+  "university": "UC Santa Barbara",
+  "university_url": "https://cs.ucsb.edu/",
+  "photo": "/img/me.jpg",
+  "bio": "I am an associate professor in the <a href=\"https://www.cs.ucsb.edu/\" target=\"_blank\">computer science department</a> at UC Santa Barbara. I received my Ph.D. from UT Austin in 2018, where I was advised by Isil Dillig. My group builds automated reasoning tools at the intersection of programming languages, formal verification, and security — with recent focus on zero-knowledge proof systems and safe AI agents. Our work has been recognized with multiple Distinguished/Best Paper Awards at PLDI, CHI, and ASE, and has been supported by NSF, DARPA, Google, and the Ethereum Foundation.",
+  "research": "My research develops principled techniques — rooted in program synthesis, type theory, and constraint solving — to automatically build, verify, and secure software systems. Current focus areas include: <b>(1)</b> formal methods and security for AI agents, ensuring autonomous systems behave safely and correctly through verification and runtime guarantees; <b>(2)</b> compilers and verifiers for zero-knowledge proof circuits, where we have built tools like Tabby and Tessel that detect vulnerabilities and optimize performance in ZK systems deployed in production; <b>(3)</b> smart contract and DeFi security, including attack synthesis and state-inconsistency detection; and <b>(4)</b> synthesis-driven tools for end-user programming, such as data visualization and code transpilation. A unifying theme is combining logical reasoning with learning to push the frontier of what automated tools can guarantee.",
+  "recruiting": "",
+  "interests": [
+    "AI Agent Safety & Verification",
+    "Zero-Knowledge Proofs",
+    "Program Synthesis",
+    "Programming Languages",
+    "Security"
+  ],
+  "education": [
+    {
+      "degree": "Ph.D. in Computer Science",
+      "year": "2018",
+      "institution": "University of Texas at Austin"
+    },
+    {
+      "degree": "M.S. in Computer Science",
+      "year": "2008",
+      "institution": "Beihang University"
+    }
+  ],
+  "email": "yufeng@cs.ucsb.edu",
+  "scholar": "https://scholar.google.co.uk/citations?user=urQ9fNgAAAAJ",
+  "github": "https://github.com/fredfeng",
+  "twitter": "https://x.com/captain8299",
+  "office": "Harold Frank Hall, Room 2157, UCSB"
+}

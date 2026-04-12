@@ -1,0 +1,34 @@
+# Yu Feng
+
+> Associate Professor, Computer Science, UC Santa Barbara
+
+Yu Feng is an associate professor in computer science at UC Santa Barbara. His research focuses on programming languages, formal verification, security, program synthesis, and AI agent safety.
+
+## Research Areas
+- Formal methods and security for AI agents
+- Zero-knowledge proof compilers and verifiers
+- Smart contract and DeFi security
+- Program synthesis for end-user programming
+
+## Links
+- Homepage: https://fredfeng.github.io/
+- Google Scholar: https://scholar.google.co.uk/citations?user=urQ9fNgAAAAJ
+- GitHub: https://github.com/fredfeng
+- X/Twitter: https://x.com/captain8299
+- Email: yufeng@cs.ucsb.edu
+
+## Selected Publications
+- Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits, OOPSLA 2025
+- Automated Repair of OpenID Connect Programs, ASE 2025
+- Tessel: An Optimizing Compiler for Efficient Zero-Knowledge Circuits, SBC 2025
+- FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols, CCS 2024
+- AuthSaber: Automated Safety Verification of OpenID Connect Programs, CCS 2024
+- Refinement Types for Visualization, ASE 2024
+- Certifying Zero-Knowledge Circuits with Refinement Types, IEEE Security & Privacy (Oakland) 2024
+- Practical Security Analysis of Zero-Knowledge Proof Circuits, USENIX Security 2024
+- Fast and Reliable Program Synthesis via User Interaction, ASE 2023
+- Conflict-Driven Synthesis for Layout Engines, PLDI 2023
+
+## Education
+- Ph.D. in Computer Science, University of Texas at Austin, 2018
+- M.S. in Computer Science, Beihang University, 2008
