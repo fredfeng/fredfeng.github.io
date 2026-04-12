@@ -49,28 +49,17 @@ def build_students(students):
     return '\n'.join(cards)
 
 
-def build_publications(pubs):
-    by_year = defaultdict(list)
-    for p in pubs:
-        by_year[p['year']].append(p)
+def build_pub_item(p):
+    award_badge = ''
+    if p.get('award'):
+        award_badge = f'<span class="award-badge"><i class="fa-solid fa-trophy"></i> {p["award"]}</span>'
 
-    html_parts = []
-    for year in sorted(by_year.keys(), reverse=True):
-        html_parts.append(f'''
-        <div class="pub-year-group">
-          <div class="pub-year-header">{year}</div>''')
+    if p.get('url') and p['url'] != '#':
+        pdf_link = f'<a href="{p["url"]}" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a>'
+    else:
+        pdf_link = ''
 
-        for p in by_year[year]:
-            award_badge = ''
-            if p.get('award'):
-                award_badge = f'<span class="award-badge"><i class="fa-solid fa-trophy"></i> {p["award"]}</span>'
-
-            if p.get('url') and p['url'] != '#':
-                pdf_link = f'<a href="{p["url"]}" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a>'
-            else:
-                pdf_link = ''
-
-            html_parts.append(f'''
+    return f'''
           <div class="pub-item">
             <div class="pub-title">{p["title"]}</div>
             <div class="pub-authors">{p["authors"]}</div>
@@ -79,11 +68,47 @@ def build_publications(pubs):
               {award_badge}
             </div>
             <div class="pub-links">{pdf_link}</div>
-          </div>''')
+          </div>'''
 
-        html_parts.append('        </div>')
 
-    return '\n'.join(html_parts)
+def build_publications(pubs, cutoff_year=5):
+    from datetime import date
+    min_recent_year = date.today().year - cutoff_year + 1
+
+    by_year = defaultdict(list)
+    for p in pubs:
+        by_year[p['year']].append(p)
+
+    recent_parts = []
+    older_parts = []
+
+    for year in sorted(by_year.keys(), reverse=True):
+        group = f'''
+        <div class="pub-year-group">
+          <div class="pub-year-header">{year}</div>'''
+        for p in by_year[year]:
+            group += build_pub_item(p)
+        group += '\n        </div>'
+
+        if year >= min_recent_year:
+            recent_parts.append(group)
+        else:
+            older_parts.append(group)
+
+    html = '\n'.join(recent_parts)
+
+    if older_parts:
+        html += f'''
+        <div class="pub-toggle-container">
+          <button class="pub-toggle-btn" id="pubToggle" onclick="toggleOlderPubs()">
+            <i class="fa-solid fa-chevron-down"></i> Show Earlier Publications ({min_recent_year - 1} and before)
+          </button>
+        </div>
+        <div class="pub-older" id="olderPubs" style="display: none;">
+''' + '\n'.join(older_parts) + '''
+        </div>'''
+
+    return html
 
 
 def build_awards(awards):
@@ -688,6 +713,40 @@ def build():
       color: #fff;
     }}
 
+    .pub-toggle-container {{
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+    }}
+
+    .pub-toggle-btn {{
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 2px solid var(--color-border);
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }}
+
+    .pub-toggle-btn:hover {{
+      border-color: var(--color-accent);
+      color: var(--color-accent-dark);
+    }}
+
+    .pub-toggle-btn i {{
+      transition: transform 0.3s ease;
+    }}
+
+    .pub-toggle-btn.expanded i {{
+      transform: rotate(180deg);
+    }}
+
     /* ---- Awards ---- */
     .awards-list {{
       list-style: none;
@@ -1086,6 +1145,21 @@ def build():
   </footer>
 
   <script>
+    // Toggle older publications
+    function toggleOlderPubs() {{
+      const older = document.getElementById('olderPubs');
+      const btn = document.getElementById('pubToggle');
+      if (older.style.display === 'none') {{
+        older.style.display = 'block';
+        btn.classList.add('expanded');
+        btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Hide Earlier Publications';
+      }} else {{
+        older.style.display = 'none';
+        btn.classList.remove('expanded');
+        btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Show Earlier Publications';
+      }}
+    }}
+
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');

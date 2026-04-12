@@ -906,6 +906,40 @@
       color: #fff;
     }
 
+    .pub-toggle-container {
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .pub-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: 2px solid var(--color-border);
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-main);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .pub-toggle-btn:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent-dark);
+    }
+
+    .pub-toggle-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .pub-toggle-btn.expanded i {
+      transform: rotate(180deg);
+    }
+
     /* ---- Awards ---- */
     .awards-list {
       list-style: none;
@@ -1233,7 +1267,7 @@
       <div class="students-grid fade-in">
         
           <div class="student-card">
-            <div class="student-name"><a href="https://sites.cs.ucsb.edu/~yanju/" target="_blank" rel="noopener">Yanju Chen</a></div>
+            <div class="student-name"><a href="https://chyanju.github.io/" target="_blank" rel="noopener">Yanju Chen</a></div>
             <div class="student-role">PhD</div>
           </div>
 
@@ -1251,11 +1285,6 @@
             <div class="student-name">Hanzhi Liu</div>
             <div class="student-role">PhD</div>
           </div>
-
-          <div class="student-card">
-            <div class="student-name">Bryan Tan</div>
-            <div class="student-role">BS/MS</div>
-          </div>
       </div>
     </div>
   </section>
@@ -1271,7 +1300,6 @@
         
         <div class="pub-year-group">
           <div class="pub-year-header">2025</div>
-
           <div class="pub-item">
             <div class="pub-title">Tabby: A Synthesis-Aided Compiler for High-Performance Zero-Knowledge Proof Circuits</div>
             <div class="pub-authors">Junrui Liu, Jiaxin Song, Yanning Chen, Hanzhi Liu, Hongbo Wen, Luke Pearson, Yanju Chen, Yu Feng</div>
@@ -1281,7 +1309,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3763110" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Automated Repair of OpenID Connect Programs</div>
             <div class="pub-authors">Tamjid Al Rahat, Yanju Chen, Yu Feng, Yuan Tian</div>
@@ -1291,7 +1318,6 @@
             </div>
             <div class="pub-links"><a href="https://conf.researchr.org/details/ase-2025/ase-2025-papers/206/Automated-Repair-of-OpenID-Connect-Programs" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Tessel: An Optimizing Compiler for Efficient Zero-Knowledge Circuits</div>
             <div class="pub-authors">Junrui Liu, Jiaxin Song, Yanning Chen, Hanzhi Liu, Hongbo Wen, Yanju Chen, Yu Feng</div>
@@ -1305,7 +1331,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2024</div>
-
           <div class="pub-item">
             <div class="pub-title">FORAY: Towards Effective Attack Synthesis against Deep Logical Vulnerabilities in DeFi Protocols</div>
             <div class="pub-authors">Hongbo Wen, Hanzhi Liu, Jiaxin Song, Yanju Chen, Wenbo Guo, Yu Feng</div>
@@ -1315,7 +1340,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3658644.3690293" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">AuthSaber: Automated Safety Verification of OpenID Connect Programs</div>
             <div class="pub-authors">Tamjid Al Rahat, Yu Feng, Yuan Tian</div>
@@ -1325,7 +1349,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3658644.3670318" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Refinement Types for Visualization</div>
             <div class="pub-authors">Junrui Liu, Jingtao Xia, Nicholas Brown, Yanju Chen, Yu Feng</div>
@@ -1335,7 +1358,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3691620.3695550" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Certifying Zero-Knowledge Circuits with Refinement Types</div>
             <div class="pub-authors">Junrui Liu, Hanzhi Liu, Ian Kretz, Bryan Tan, Jonathan Wang, Yi Sun, Luke Pearson, Anders Miltner, Isil Dillig, Yu Feng</div>
@@ -1345,7 +1367,6 @@
             </div>
             <div class="pub-links"><a href="https://eprint.iacr.org/2023/547" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Practical Security Analysis of Zero-Knowledge Proof Circuits</div>
             <div class="pub-authors">Hongbo Wen, Jon Stephens, Yanju Chen, Kostas Ferles, Shankara Pailoor, Kyle Charbonnet, Isil Dillig, Yu Feng</div>
@@ -1359,7 +1380,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2023</div>
-
           <div class="pub-item">
             <div class="pub-title">Fast and Reliable Program Synthesis via User Interaction</div>
             <div class="pub-authors">Yanju Chen, Chenglong Wang, Xinyu Wang, Osbert Bastani, Yu Feng</div>
@@ -1369,7 +1389,6 @@
             </div>
             <div class="pub-links"><a href="https://www.computer.org/csdl/proceedings-article/ase/2023/299600a963/1SBGDsstD1e" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Conflict-Driven Synthesis for Layout Engines</div>
             <div class="pub-authors">Junrui Liu, Yanju Chen, Eric Atkinson, Yu Feng, Ras Bodik</div>
@@ -1379,7 +1398,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3591246" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Automated Detection of Under-constrained Circuits in Zero-Knowledge Proofs</div>
             <div class="pub-authors">Yanju Chen, Shankara Pailoor, Franklyn Wang, Clara Rodríguez, Jacob Van Geffen, Jason Morton, Michael Chu, Brian Gu, Yu Feng, Isil Dillig</div>
@@ -1393,7 +1411,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2022</div>
-
           <div class="pub-item">
             <div class="pub-title">Learning Contract Invariants Using Reinforcement Learning</div>
             <div class="pub-authors">Junrui Liu, Yanju Chen, Bryan Tan, Isil Dillig, Yu Feng</div>
@@ -1403,7 +1420,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3551349.3556962" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Cerberus: Query-driven Scalable Security Checking for OAuth Service Provider Implementations</div>
             <div class="pub-authors">Tamjid Al Rahat, Yu Feng, Yuan Tian</div>
@@ -1413,7 +1429,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3548606.3559381" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Visualization Question Answering Using Introspective Program Synthesis</div>
             <div class="pub-authors">Yanju Chen, Xifeng Yan, Yu Feng</div>
@@ -1423,7 +1438,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3519939.3523709" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Tree Traversal Synthesis Using Domain-Specific Symbolic Compilation</div>
             <div class="pub-authors">Yanju Chen, Junrui Liu, Yu Feng, Ras Bodik</div>
@@ -1433,7 +1447,6 @@
             </div>
             <div class="pub-links"><a href="/papers/hecate.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">SolType: Refinement Types for Solidity</div>
             <div class="pub-authors">Bryan Tan, Benjamin Mariano, Shuvendu Lahiri, Isil Dillig, Yu Feng</div>
@@ -1443,7 +1456,6 @@
             </div>
             <div class="pub-links"><a href="/papers/soltype.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Automated Transpilation of Imperative to Functional Code using Neural-Guided Program Synthesis</div>
             <div class="pub-authors">Benjamin Mariano, Yanju Chen, Yu Feng, Greg Durrett, Isil Dillig</div>
@@ -1453,7 +1465,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3527315" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Synthesis-Powered Optimization of Smart Contracts via Data Type Refactoring</div>
             <div class="pub-authors">Yuepeng Wang, Maruth Goyal, James Dong, Yanju Chen, Yu Feng, Isil Dillig</div>
@@ -1463,7 +1474,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/pdf/10.1145/3563308" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">SAILFISH: Vetting Smart Contract State-Inconsistency Bugs in Seconds</div>
             <div class="pub-authors">Priyanka Bose, Dipanjan Das, Yanju Chen, Yu Feng, Christopher Kruegel, Giovanni Vigna</div>
@@ -1474,10 +1484,15 @@
             <div class="pub-links"><a href="/papers/sailfish.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
         </div>
+        <div class="pub-toggle-container">
+          <button class="pub-toggle-btn" id="pubToggle" onclick="toggleOlderPubs()">
+            <i class="fa-solid fa-chevron-down"></i> Show Earlier Publications (2021 and before)
+          </button>
+        </div>
+        <div class="pub-older" id="olderPubs" style="display: none;">
 
         <div class="pub-year-group">
           <div class="pub-year-header">2021</div>
-
           <div class="pub-item">
             <div class="pub-title">Checking Conformance of Applications against GUI Policies</div>
             <div class="pub-authors">Zhen Zhang, Yu Feng, Michael D. Ernst, Sebastian Porst, Isil Dillig</div>
@@ -1487,7 +1502,6 @@
             </div>
             <div class="pub-links"><a href="https://dl.acm.org/doi/10.1145/3468264.3468561" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Falx: Synthesis-Powered Visualization Authoring</div>
             <div class="pub-authors">Chenglong Wang, Yu Feng, Ras Bodik, Isil Dillig, Alvin Cheung, Amy J Ko</div>
@@ -1501,7 +1515,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2020</div>
-
           <div class="pub-item">
             <div class="pub-title">Summary-Based Symbolic Evaluation for Smart Contracts</div>
             <div class="pub-authors">Yu Feng, Emina Torlak, Ras Bodik</div>
@@ -1511,7 +1524,6 @@
             </div>
             <div class="pub-links"><a href="/papers/ase20-solar.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Demystifying Loops in Smart Contracts</div>
             <div class="pub-authors">Benjamin Mariano, Yanju Chen, Yu Feng, Shuvendu Lahiri, Isil Dillig</div>
@@ -1521,7 +1533,6 @@
             </div>
             <div class="pub-links"><a href="/papers/ase20-consul.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Program Synthesis using Deduction-Guided Reinforcement Learning</div>
             <div class="pub-authors">Yanju Chen, Chenglong Wang, Osbert Bastani, Isil Dillig, Yu Feng</div>
@@ -1531,7 +1542,6 @@
             </div>
             <div class="pub-links"><a href="/papers/cav20.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Visualization by Example</div>
             <div class="pub-authors">Chenglong Wang, Yu Feng, Ras Bodik, Alvin Cheung, Isil Dillig</div>
@@ -1545,7 +1555,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2019</div>
-
           <div class="pub-item">
             <div class="pub-title">OAuthLint: An Empirical Study on OAuth Bugs in Android Applications</div>
             <div class="pub-authors">Tamjid Al Rahat, Yu Feng, Yuan Tian</div>
@@ -1555,7 +1564,6 @@
             </div>
             <div class="pub-links"><a href="/papers/ase19-oauth.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Maximal Multi-layer Specification Synthesis</div>
             <div class="pub-authors">Yanju Chen, Ruben Martins, Yu Feng</div>
@@ -1565,7 +1573,6 @@
             </div>
             <div class="pub-links"><a href="/papers/fse19-mars.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Relational Verification using Reinforcement Learning</div>
             <div class="pub-authors">Jia Chen, Jiayi Wei, Yu Feng, Osbert Bastani, Isil Dillig</div>
@@ -1575,7 +1582,6 @@
             </div>
             <div class="pub-links"><a href="/papers/oopsla19-coeus.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Trinity: An Extensible Synthesis Framework for Data Science</div>
             <div class="pub-authors">Jia Chen, Ruben Martins, Yanju Chen, Yu Feng, Isil Dillig</div>
@@ -1589,7 +1595,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2018</div>
-
           <div class="pub-item">
             <div class="pub-title">Program Synthesis using Conflict-Driven Learning</div>
             <div class="pub-authors">Yu Feng, Ruben Martins, Osbert Bastani, Isil Dillig</div>
@@ -1599,7 +1604,6 @@
             </div>
             <div class="pub-links"><a href="/papers/pldi18-neo.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Singularity: Pattern Fuzzing for Worst Case Complexity</div>
             <div class="pub-authors">Jiayi Wei, Jia Chen, Yu Feng, Kostas Ferles, Isil Dillig</div>
@@ -1613,7 +1617,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2017</div>
-
           <div class="pub-item">
             <div class="pub-title">Precise Detection of Side-Channel Vulnerabilities using Quantitative Cartesian Hoare Logic</div>
             <div class="pub-authors">Jia Chen, Yu Feng, Isil Dillig</div>
@@ -1623,7 +1626,6 @@
             </div>
             <div class="pub-links"><a href="/papers/ccs17.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Component-based Synthesis of Table Consolidation and Transformation Tasks from Examples</div>
             <div class="pub-authors">Yu Feng, Ruben Martins, Jacob Van Geffen, Isil Dillig, Swarat Chaudhuri</div>
@@ -1633,7 +1635,6 @@
             </div>
             <div class="pub-links"><a href="/papers/pldi17-extend.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Automated Synthesis of Semantic Malware Signatures using Maximum Satisfiability</div>
             <div class="pub-authors">Yu Feng, Osbert Bastani, Ruben Martins, Isil Dillig, Saswat Anand</div>
@@ -1643,7 +1644,6 @@
             </div>
             <div class="pub-links"><a href="/papers/ndss17-astroid.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">Component-Based Synthesis for Complex APIs</div>
             <div class="pub-authors">Yu Feng, Ruben Martins, Yuepeng Wang, Isil Dillig, Thomas W. Reps</div>
@@ -1657,7 +1657,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2016</div>
-
           <div class="pub-item">
             <div class="pub-title">Hunter: Next-Generation Code Reuse for Java</div>
             <div class="pub-authors">Yuepeng Wang, Yu Feng, Ruben Martins, Isil Dillig, Steven P. Reiss</div>
@@ -1671,7 +1670,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2015</div>
-
           <div class="pub-item">
             <div class="pub-title">Bottom-up Context-Sensitive Pointer Analysis for Java</div>
             <div class="pub-authors">Yu Feng, Xinyu Wang, Isil Dillig, Thomas Dillig</div>
@@ -1681,7 +1679,6 @@
             </div>
             <div class="pub-links"><a href="/papers/aplas15.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
-
           <div class="pub-item">
             <div class="pub-title">EXPLORER: Query- and Demand-Driven Exploration of Interprocedural Control Flow Properties</div>
             <div class="pub-authors">Yu Feng, Xinyu Wang, Isil Dillig, Calvin Lin</div>
@@ -1695,7 +1692,6 @@
 
         <div class="pub-year-group">
           <div class="pub-year-header">2014</div>
-
           <div class="pub-item">
             <div class="pub-title">Apposcopy: Semantics-Based Detection of Android Malware through Static Analysis</div>
             <div class="pub-authors">Yu Feng, Saswat Anand, Isil Dillig, Alex Aiken</div>
@@ -1705,6 +1701,7 @@
             </div>
             <div class="pub-links"><a href="/papers/fse14.pdf" class="pub-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a></div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -1803,6 +1800,21 @@
   </footer>
 
   <script>
+    // Toggle older publications
+    function toggleOlderPubs() {
+      const older = document.getElementById('olderPubs');
+      const btn = document.getElementById('pubToggle');
+      if (older.style.display === 'none') {
+        older.style.display = 'block';
+        btn.classList.add('expanded');
+        btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Hide Earlier Publications';
+      } else {
+        older.style.display = 'none';
+        btn.classList.remove('expanded');
+        btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i> Show Earlier Publications';
+      }
+    }
+
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
