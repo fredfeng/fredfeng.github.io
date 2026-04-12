@@ -940,6 +940,48 @@
       transform: rotate(180deg);
     }
 
+    /* ---- Teaching ---- */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .teaching-card {
+      background: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: var(--transition);
+    }
+
+    .teaching-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .teaching-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .teaching-card h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .teaching-card h3 a:hover {
+      color: var(--color-accent);
+    }
+
+    .teaching-card p {
+      color: var(--color-text-light);
+      font-size: 0.93rem;
+      line-height: 1.6;
+    }
+
     /* ---- Awards ---- */
     .awards-list {
       list-style: none;
@@ -1187,6 +1229,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">Home</a></li>
         <li><a href="#students">Students</a></li>
+        <li><a href="#teaching">Teaching</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#awards">Awards</a></li>
         <li><a href="#service">Service</a></li>
@@ -1289,8 +1332,32 @@
     </div>
   </section>
 
+  <!-- Teaching -->
+  <section class="section section-alt" id="teaching" aria-label="Teaching">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Teaching</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="teaching-grid fade-in">
+        <div class="teaching-card">
+          <h3><a href="https://github.com/fredfeng/CS292C" target="_blank" rel="noopener">CS 292C: Formal Methods for Agentic Programming</a></h3>
+          <p>Graduate seminar exploring formal verification of AI coding agents. Covers agent architectures, Hoare logic, SAT/SMT solvers, static analysis, security of agentic systems, and runtime guardrails.</p>
+        </div>
+        <div class="teaching-card">
+          <h3><a href="https://github.com/fredfeng/CS162" target="_blank" rel="noopener">CS 162: Programming Languages</a></h3>
+          <p>Undergraduate course on programming language foundations. Students build a language from scratch, covering lambda calculus, operational semantics, type checking, type inference, and polymorphism.</p>
+        </div>
+        <div class="teaching-card">
+          <h3><a href="https://github.com/fredfeng/CS190-blockchain" target="_blank" rel="noopener">CS 190J: Blockchain Technologies and Security</a></h3>
+          <p>Hands-on exploration of blockchain systems and DeFi. Covers Ethereum, Solidity, smart contract patterns, AMMs, lending protocols, MEV, layer-2 scaling, and security case studies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Publications -->
-  <section class="section section-alt" id="publications" aria-label="Publications">
+  <section class="section" id="publications" aria-label="Publications">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Publications</h2>
@@ -1708,7 +1775,7 @@
   </section>
 
   <!-- Awards -->
-  <section class="section" id="awards" aria-label="Awards and Grants">
+  <section class="section section-alt" id="awards" aria-label="Awards and Grants">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Awards &amp; Grants</h2>
@@ -1732,7 +1799,7 @@
   </section>
 
   <!-- Service -->
-  <section class="section section-alt" id="service" aria-label="Professional Service">
+  <section class="section" id="service" aria-label="Professional Service">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Service</h2>
@@ -1753,7 +1820,7 @@
   </section>
 
   <!-- Contact -->
-  <section class="section" id="contact" aria-label="Contact Information">
+  <section class="section section-alt" id="contact" aria-label="Contact Information">
     <div class="container">
       <div class="section-header fade-in">
         <h2>Contact</h2>
